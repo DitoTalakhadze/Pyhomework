@@ -31,7 +31,7 @@ order = "steak"
 if order != "burger":
     print("sorry we only serve burgers")
 
-#test with lower() - example: someone chose "Mazda" in filter/searach.
+#test with lower() - example: someone chose "Mazda" in filter/search.
 
 manufacturer = "Mazda"
 if manufacturer.lower() == 'mazda':
@@ -63,7 +63,7 @@ else:
     print("your request will be reviwed by our administration, thanks!")
 car = "subaru"
 fast = 'subaru'
-if car == "subaru" and fast == "subaru":
+if car in "subaru" and fast in "subaru":
     print("you have a fast car")
 else:
     print("either you have a slow car or dont have a card")
@@ -171,5 +171,51 @@ else:
 """5.8"""
 
 #hello admin. 
+
+
+usernames = ["eric", 'kenny', 'stan', 'kayle', 'leopold']
+admins = ['eric', 'kenny', 'leopold']
+for username in usernames:
+    if username in admins:
+        print(f'Hello {username.title()}, would you like to see some stats')
+    else:
+        print(f'hello {username.title()}, welcome back')
+
+
+# no users empty list
+
+usernames = []
+print(len(usernames))
+if len(usernames) == 0:
+    print('we need to find some users')
+
+# checking usernaames
+
+current_users = ["bobby", "jimmy", "timmy", "wendy", "lenstalberi"]
+new_users = ['susan', 'ike', 'bruno', 'tolkein', 'lenstalberi']
+for users in new_users:
+    if users in current_users:
+        print(f'{users} is taken please try something else')
+
+# Ordinal numbers
+
+number_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+for number in number_list:
+    if number == 1:
+        print(f"{number}st")
+    elif number == 2:
+        print(f"{number}nd")
+    elif number == 3:
+        print(f"{number}rd")
+    else:
+        print(f"{number}th")
+
+
+"""დაწერეთ კოდი"""
+# მგონი ვერ მივხვდი პირობას
+
+products = ['coffee, 20', 'sugar, 10', 'butter, 15', 'bread, 5', 'potion of immortality, 5_000_000']
+for product in products:
+    print(f'[{product}]')
 
 
