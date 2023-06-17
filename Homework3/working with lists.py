@@ -75,6 +75,7 @@ search = input("Enter name: ")
 for product in products:
     if search.lower() in product[0].lower():
         print(F'result for {product[0]} - price {product[1]} USD')
+        
 
 
 
@@ -95,6 +96,26 @@ users = [
 *
 5 points"""
 
+users = [
+   ["Legend27", "a1s2d3f4"],
+   ["james123", "c5bt43f4"],
+   ["DaveIsGreat", "wlervtb3r"] 
+]
+
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+authorized = False
+
+for user in users:
+    if user[0] == username and user[1] == password:
+        authorized = True
+        break
+
+if authorized:
+    print("Authorization successful!")
+else:
+    print("Authorization failed.")
 
 
 
@@ -104,6 +125,7 @@ users = [
 წინა დავალებებში დაწერილი კოდი (პროდუქტის არჩევაზე და მომხმარებლის ავტორიზაციაზე) გამოიყენეთ და მომხმარებელს პროდუქტი აარჩევინეთ მხოლოდ იმ შემთხვევაში თუ ავტორიზაცია გავლილი აქვს.
 *
 5 points
+
 users = [
 ["Legend27", "a1s2d3f4"],
 ["james123", "c5bt43f4"],
@@ -117,6 +139,7 @@ balances = [
 ]
 ბალანსი ჩაამატეთ შესაბამის ინექსზე users ლისტში (მაგ. განახლებულ ლისტში მეორე ინდექსე მდგომ ელემენტს ასეთი სახე უნდა ჰქონდეს ["james123", "c5bt43f4", 12000])
 *
+
 5 points
 შეავსეთ ლისტი იმ ასოებით, რომლებიც აკლია პირველიდან ბოლო ელემენტამდე 
 
