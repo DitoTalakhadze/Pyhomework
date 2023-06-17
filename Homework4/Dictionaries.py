@@ -69,3 +69,29 @@ for city in cities[1:]:
 print(highest_population)
 
 
+"""მოცემულია ლისტი, სადაც წერია თანამშრომლების სახელები, ასევე მოცემულია default dict-ი სადაც წერია "default" მნიშვნელობები.
+ თქვენი დავალებაა შექმნათ ამ თანამშრომლებისთვის ახალი ლისტი,
+   რომელშიც შეინახავთ თანამშრომლის სახელს და + "მიადგამთ" default მნიშვნელობებს."""
+
+employees = ["Kelly", "Emma", "John"]
+defaults = {"designation": "Application Developer", "Salary": 8000}
+
+
+
+
+
+"""მოცემულია ლისტი, სადაც წერია რა გასაღებები (key) უნდა ამოიშალოს employee dict-იდან.
+ ამოშალეთ და დაპრინტეთ დარჩენილი მნიშვნელობები და გასაღებები.
+*
+10 points
+"""
+
+employee = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+#keys_to_remove = ["Name", "salary"]
+
+
