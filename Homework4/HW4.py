@@ -115,9 +115,9 @@ fav_places = {"jack": ["black pearl", "tavern", "jail"],
               "zavala": ["balcony"]}
 for name, place in fav_places.items():
     if len(place) > 1:
-        print(F"{name} favourite places are {place}")
+        print(F"{name}'s favourite places are {place}")
     else:
-        print(F"{name} favourite place is {place}")
+        print(F"{name}'s favourite place is {place}")
 
 
 
