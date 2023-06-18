@@ -120,5 +120,65 @@ for name, place in fav_places.items():
         print(F"{name}'s favourite place is {place}")
 
 
+#6.11
+cities = {
+    "Tbilisi": {"country": "Georgia", "fact": "very old"},
+    "Rome": {"country": "Ialy", "fact": "unique"}
+}
+
+for city, city_info in cities.items():
+    country = city_info["country"]
+    fact = city_info["fact"]
+    print(F"{city} is located in a {country}, it is {fact}")
 
 
+#7.4
+
+topping = "\nTell me something, and I will add it to pizza:"
+topping += "\nEnter 'quit' to end the program. "
+message = ""
+while message != "quit":
+    message = input(topping)
+    if message != "quit":
+        print(f"I will add {message} to pizza")
+
+#7.5
+active = True
+while active:
+    age = int(input("please enter your age: "))
+    if age <= 3:
+        print("tickets are free")
+        active = False
+    elif age > 3 and age <= 12:
+        print("$10")
+        active = False
+    else:
+        print("$15")
+        active = False
+
+#7.9
+sandwich_orders = ["tuna", "pastrami", "chicken", "pastrami", "beef", "pastrami", "pork"]
+finished_sandwiches = []
+while sandwich_orders:
+    order = sandwich_orders.pop()
+    print(F"making {order} sandwich")
+    if "pastrami" in order:
+        print("we are out of pastrami")
+    else:
+        finished_sandwiches.append(order)
+        print(F"finished making {order} sandwich")
+print(f" finished orders {finished_sandwiches}")
+
+#7.10
+responses = {}
+pole = active
+while pole:
+    user = input("whats your name: ")
+    response = input("If you could visit one place in the world, where would you go: ")
+    responses[user] = response
+    repeat = input("Would you like to let another person respond? (yes/ no) ")
+    if repeat == "no":
+        pole = False
+    print("\n--- Poll Results ---")
+    for name, response in responses.items():
+        print(f"{user} would like to climb {response}.")
