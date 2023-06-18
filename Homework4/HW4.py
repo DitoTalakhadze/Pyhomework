@@ -169,16 +169,3 @@ while sandwich_orders:
         print(F"finished making {order} sandwich")
 print(f" finished orders {finished_sandwiches}")
 
-#7.10
-responses = {}
-pole = active
-while pole:
-    user = input("whats your name: ")
-    response = input("If you could visit one place in the world, where would you go: ")
-    responses[user] = response
-    repeat = input("Would you like to let another person respond? (yes/ no) ")
-    if repeat == "no":
-        pole = False
-    print("\n--- Poll Results ---")
-    for name, response in responses.items():
-        print(f"{user} would like to climb {response}.")
