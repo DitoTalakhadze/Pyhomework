@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Question List</title>
+</head>
+
+<body>
+    <h1>Question List</h1>
+
+
+    <form method="get" action="{% url 'question_list' %}">
+        <input type="text" name="q" value="{{ search_query }}" placeholder="Search by title or tags">
+        <button type="submit">Search</button>
+    </form>
+
+
+    {% if questions %}
+    <ul>
+        {% for question in questions %}
+        <li>
+            <a href="{% url 'question_detail' question.pk %}">{{ question.title }}</a>
+
+            <p>Author: {{ question.author.username }}</p>
+            <p>Vote Count: {{ question.total_upvotes }} (Upvotes) / {{ question.total_downvotes }} (Downvotes)</p>
+
+            <p>Tags: {{ question.tags.all|join:", " }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No questions found.</p>
+    {% endif %}
+
+
+    <p><a href="{% url 'home' %}">Go back to home page</a></p>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Question{% endblock %}
+
+{% block content %}
+<h1>Delete Question</h1>
+<p>Are you sure you want to delete the question "{{ object.title }}"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete</button>
+    <a href="{% url 'question_detail' object.pk %}">Cancel</a>
+</form>
+{% endblock %}
